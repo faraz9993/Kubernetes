@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: voting
+  labels:
+    app: voting
+    type: front-end
+spec:
+  containers:
+  - name: voting
+    image: fansari9993/test9:tagname
+
+
+# This code is written in YAML and describes a Kubernetes Pod manifest.
+# apiVersion: Specifies the version of the Kubernetes API being used. In this case, it's v1, which is the core Kubernetes API version.
+# kind: Specifies the type of Kubernetes resource being defined. Here, it's Pod, indicating that this YAML defines a Pod.
+# metadata: Contains metadata about the Pod, such as its name and labels.
+# name: Specifies the name of the Pod as voting.
+# labels: Provides labels to identify and categorize the Pod. It has two labels:
+# app: voting: This label identifies the application running in this Pod as "voting".
+# type: front-end: This label categorizes the Pod as a front-end component.
+# spec: Describes the desired state of the Pod.
+# containers: Specifies the containers that should be launched within the Pod.
+# - name: voting: Defines the name of the container inside the Pod as voting.
+# - image: fansari9993/test9:tagname: Specifies the Docker image to be used for this container. It will pull the image fansari9993/test9 with the tag tagname from a container registry. This container is likely to run the "voting" application mentioned earlier.

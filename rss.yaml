@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: voting
+  labels:
+    app: voting
+    type: front-end
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      type: front-end
+  template:
+    metadata:
+      name: voting
+      labels:
+        app: voting
+        type: front-end
+    spec:
+      containers:
+        - name: voting
+          image: fansari9993/test9:tagname
